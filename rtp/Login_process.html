@@ -1,0 +1,64 @@
+<?php
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    // Load the PHPExcel library (make sure you have it installed)
+    require_once 'PHPExcel/PHPExcel.php';
+
+    // Path to the Excel file
+    $excelFile = 'user_credentials.xlsx';
+
+    // Load the Excel file
+    $excel = PHPExcel_IOFactory::load($excelFile);
+
+    // Get the first worksheet
+    $worksheet = $excel->getActiveSheet();
+
+    // Get all rows as an associative array
+    $data = $worksheet->toArray(null, true, true, true);
+
+    $enteredUsername = $_POST["username"];
+    $enteredPassword = $_POST["password"];
+
+    // Check entered credentials against Excel data
+    foreach ($data as $row) {
+        $username = $row['A'];
+        $password = $row['B'];
+
+        if ($enteredUsername === $username && $enteredPassword === $password) {
+            // Successful login
+            header("Location: welcome.php"); // Redirect to the welcome page
+            exit();
+        }
+    }
+
+    // Failed login
+    $error = "Invalid username or password";
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Process</title>
+    <style>
+        /* Your CSS styling here */
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login Process</h2>
+        <?php if (isset($error)) : ?>
+            <p style="color: red;"><?php echo $error; ?></p>
+        <?php else: ?>
+            <p>Login successful. Redirecting...</p>
+            <script>
+                setTimeout(function () {
+                    window.location.href = 'opt.html'; // Redirect to opt.html after a delay
+                }, 2000); // Delay in milliseconds (e.g., 2 seconds)
+            </script>
+        <?php endif; ?>
+    </div>
+</body>
+</html>
+S

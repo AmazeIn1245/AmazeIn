@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        /* Your CSS styling here */
+        .dashboard-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Align items horizontally */
+            justify-content: center; /* Align items vertically */
+            text-align: center;
+        }
+        
+        .dashboard-container button {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <h2>Welcome to Your Dashboard</h2>
+        <p>This is your dashboard content. You can add more information and features here.</p>
+        <button onclick="ORASystem()">ORASystem</button>
+        <button onclick="Amillar()">Amillar</button>
+        <button onclick="Cedula()">Cedula</button>
+		<button onclick="Form51()">Form51</button>
+		<button onclick="Certification()">Certification</button>
+        <button onclick="PreAuction()">Pre-Auction</button>
+        <button onclick="Reports()">Reports</button>
+        <button onclick="GenRev()">Gen. Revision</button>
+        <button onclick="Print()">Print</button>
+		<button onclick="Search()">Search</button>        
+		<button onclick="Settings()">Settings</button>
+		<button onclick="Help()">Help</button>
+        <a href="logout.php">Logout</a>
+    </div>
+
+    <script>
+        function ORASystem() {
+            // Add code to open the ORASystem page or perform an action
+            // For example: window.location.href = "ORASystem.html";
+        }
+
+        function Amillar() {
+            // Add code to open the Amillar page or perform an action
+            // For example: window.location.href = "Amillar.html";
+        }
+
+        function Cedula() {
+            // Add code to open the Cedula page or perform an action
+            // For example: window.location.href = "Cedula.html";
+        }
+
+                // ... Previous JavaScript code ...
+
+        function Form51() {
+            // Add code to open the Form51 page or perform an action
+            // For example: window.location.href = "Form51.html";
+        }
+
+        function Certification() {
+            // Add code to open the Certification page or perform an action
+            // For example: window.location.href = "Certification.html";
+        }
+
+        function PreAuction() {
+            // Add code to open the Pre-Auction page or perform an action
+            // For example: window.location.href = "PreAuction.html";
+        }
+
+        function Reports() {
+            // Add code to open the Reports page or perform an action
+            // For example: window.location.href = "Reports.html";
+        }
+
+        function GenRev() {
+            // Add code to open the Gen. Revision page or perform an action
+            // For example: window.location.href = "GenRev.html";
+        }
+
+        function Print() {
+            // Add code to perform a print action
+            // For example: window.print();
+        }
+
+        function Search() {
+            // Add code to open the Search page or perform an action
+            // For example: window.location.href = "Search.html";
+        }
+
+        function Settings() {
+            // Add code to open the Settings page or perform an action
+            // For example: window.location.href = "Settings.html";
+        }
+
+        function Help() {
+            // Add code to open the Help page or perform an action
+            // For example: window.location.href = "Help.html";
+        }
+    </script>
+</body>
+</html>
+
+        
+    
